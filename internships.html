@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internsol - All Internships</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            z-index: 1000; /* Ensure the navbar is above other elements */
+        }
+
+        /* Main Container Styles */
+        .container {
+            flex: 1; /* Allow the container to grow and fill the available space */
+            padding-top: 80px; /* Add padding to avoid overlap with the navbar */
+        }
+
+        /* Heading Styles */
+        h2 {
+            color: #343a40; /* Dark text for better contrast */
+            margin-bottom: 30px; /* Space below the heading */
+            text-align: center; /* Center align the heading */
+        }
+
+        /* Card Styles */
+        .card {
+            border: none; /* Remove card border */
+            border-radius: 10px; /* Rounded corners for cards */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: transform 0.2s; /* Smooth hover effect */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #007bff; /* Primary button color */
+            border: none; /* No border */
+            border-radius: 20px; /* Rounded buttons */
+            padding: 10px 20px; /* Increased padding */
+            transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40; /* Dark footer background */
+            color: white; /* White text for contrast */
+            padding: 20px 0; /* Padding for the footer */
+            text-align: center; /* Center align text */
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding-top: 60px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Internsol</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
+            <li class="nav-item"><a class="nav-link" href="rewards.html">Rewards</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Internships List -->
+<div class="container">
+    <h2>All Internships</h2>
+
+    <!-- Internship 1 -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Web Developer Internship</h5>
+            <p class="card-text">Location: Remote</p>
+            <p class="card-text">Join our team to build engaging, dynamic websites using the latest technologies. This role is ideal for a student looking to gain hands-on experience in web development.</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+    </div>
+
+    <!-- Internship 2 -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Data Analyst Internship</h5>
+            <p class="card-text">Location: San Francisco, CA</p>
+            <p class="card-text">Work alongside our analytics team to process, analyze, and visualize data. Perfect for students looking to get into data science or analytics.</p>
+            <button class="btn btn-primary">Apply Now</button>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div id="internship-list" class="row"></div>
+    </div>
+    
+    <!-- Add more internship cards as needed -->
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Internsol. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

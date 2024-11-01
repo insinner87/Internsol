@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internsol - Courses</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 0; /* Removed extra padding */
+            display: flex; /* Enable flexbox for layout */
+            flex-direction: column; /* Arrange items vertically */
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            transition: background-color 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        /* Container Styles */
+        .container {
+            padding-top: 5px; /* Ensure content is below navbar */
+            flex: 1; /* Allow container to expand */
+        }
+
+        /* Course Card Styles */
+        .course-card {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0; /* Adjust padding as needed */
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            margin-top: auto; /* Ensures footer stays at the bottom */
+        }
+
+        /* Heading Styles */
+        h2 {
+            margin-top: 0; /* No extra margin at the top */
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Internsol</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
+            <li class="nav-item"><a class="nav-link" href="rewards.html">Rewards</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div id="course-list" class="row"></div>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">All Available Courses</h2>
+    <div class="row">
+        <!-- Course Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card course-card flex-fill">
+                <img src="images/web-development.jpg" class="card-img-top" alt="Web Development Course">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">Learn how to create beautiful and functional websites from professional instructors all over the world.</p>
+                    <button class="btn btn-primary enroll-btn" onclick="enrollCourse('Web Development')">Enroll</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card course-card flex-fill">
+                <img src="images/data-science.jpg" class="card-img-top" alt="Data Science Course">
+                <div class="card-body">
+                    <h5 class="card-title">Data Science</h5>
+                    <p class="card-text">Explore data analysis, visualization, and machine learning.</p>
+                    <button class="btn btn-primary enroll-btn" onclick="enrollCourse('Data Science')">Enroll</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Card -->
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
+            <div class="card course-card flex-fill">
+                <img src="images/graphic-design.jpg" class="card-img-top" alt="Graphic Design Course">
+                <div class="card-body">
+                    <h5 class="card-title">Graphic Design</h5>
+                    <p class="card-text">Unleash your creativity and design stunning graphics.</p>
+                    <button class="btn btn-primary enroll-btn" onclick="enrollCourse('Graphic Design')">Enroll</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Internsol. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
